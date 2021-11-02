@@ -10,7 +10,7 @@ The schema allows posts to be created by registered users on certain topics, and
 
 Here is the DDL used to create the schema:
 
-<img> will be hear little bit later
+<img src="initial_DDL_schema.png"/>
 
 ## Starter sql
 
@@ -35,7 +35,7 @@ Because one user can have a lot of posts as well as comments in other TABLE bad_
 About the length of both (and title column) VARCHARs I will think about it a bit later.
 
 url VARCHAR(4000) DEFAULT NULL needs to be a little bit shorter, almost 2 thouthend charters less. Because the maximum length of the url is 2048 characters. And, it is a pessimistic approach. Have you seen a real life url which has a length of 1_000 characters? I’m not. And I am not expecting to see.
-You can be familiarised with url length on this stack overflow post https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers
+You can be familiarised with url length on [this stack overflow post](https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers)
 
 Then it is strange that text_content is DEFAULT NULL. 
 That suppose that we can have empty posts, which is not true. And didn't have logic. Or we can post only the url of external sors without any text, can we? It may be NOT NULL as well as a part of rest columns: topic_id, user_id and probably title
