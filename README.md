@@ -19,6 +19,13 @@ I will add initial sql for cover next steps.
 
 bad_db.sql
 
+Something goes wrong when I tried to add entire sql file
+And I divide it into two separate ones:
+
+bad-db-create.sql creates initial schema 
+
+bad-db-insert.sql inserts data for starter project
+
 ## Part I: Investigate the existing schema
 
 Hear will be work results
