@@ -66,12 +66,12 @@ here is a list of features and specifications that Udiddit needs in order to sup
   * The topic’s name can’t be empty
   * Topics can have an optional description of at most 500 characters.
 * Allow registered users to create new posts on existing topics:
-Posts have a required title of at most 100 characters
-The title of a post can’t be empty.
-Posts should contain either a URL or a text content, but not both.
-If a topic gets deleted, all the posts associated with it should be automatically deleted too.
-If the user who created the post gets deleted, then the post will remain, but it will become dissociated from that user.
-Allow registered users to comment on existing posts:
+  * Posts have a required title of at most 100 characters
+  * The title of a post can’t be empty.
+  * Posts should contain either a URL or a text content, but not both.
+  * If a topic gets deleted, all the posts associated with it should be automatically deleted too.
+  * If the user who created the post gets deleted, then the post will remain, but it will become dissociated from that user.
+* Allow registered users to comment on existing posts:
 A comment’s text content can’t be empty.
 Contrary to the current linear comments, the new structure should allow comment threads at arbitrary levels.
 If a post gets deleted, all comments associated with it should be automatically deleted too.
