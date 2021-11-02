@@ -60,12 +60,12 @@ here is a list of features and specifications that Udiddit needs in order to sup
   * Usernames can be composed of at most 25 characters
   * Usernames can’t be empty
   * We won’t worry about user passwords for this project
-Allow registered users to create new topics:
-Topic names have to be unique.
-The topic’s name is at most 30 characters
-The topic’s name can’t be empty
-Topics can have an optional description of at most 500 characters.
-Allow registered users to create new posts on existing topics:
+* Allow registered users to create new topics:
+  * Topic names have to be unique.
+  * The topic’s name is at most 30 characters
+  * The topic’s name can’t be empty
+  * Topics can have an optional description of at most 500 characters.
+* Allow registered users to create new posts on existing topics:
 Posts have a required title of at most 100 characters
 The title of a post can’t be empty.
 Posts should contain either a URL or a text content, but not both.
