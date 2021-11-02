@@ -1,0 +1,2 @@
+SELECT COUNT(*) FROM bad_posts;
+SELECT COUNT(*) FROM bad_comments;
