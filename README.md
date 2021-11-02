@@ -55,11 +55,11 @@ Requarement:
 ### Guideline #1
 
 here is a list of features and specifications that Udiddit needs in order to support its website and administrative interface:
-Allow new users to register:
-Each username has to be unique
-Usernames can be composed of at most 25 characters
-Usernames can’t be empty
-We won’t worry about user passwords for this project
+* Allow new users to register:
+  * Each username has to be unique
+  * Usernames can be composed of at most 25 characters
+  * Usernames can’t be empty
+  * We won’t worry about user passwords for this project
 Allow registered users to create new topics:
 Topic names have to be unique.
 The topic’s name is at most 30 characters
@@ -132,6 +132,6 @@ Project specifications to [meet](https://review.udacity.com/#!/rubrics/2802/view
 
 ## Free course about making beautifull READMEs
 
-[Writing READMEs cours](https://www.udacity.com/course/writing-readmes--ud777)
+[Writing READMEs course](https://www.udacity.com/course/writing-readmes--ud777)
 
 It is mot an advertisement)))
