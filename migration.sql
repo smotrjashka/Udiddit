@@ -14,3 +14,14 @@ SELECT substring(bad_posts.title from 0 for 100), good_topics.id, good_users.id,
 FROM bad_posts 
 JOIN good_users ON bad_posts.username=good_users.username
 JOIN good_topics ON bad_posts.topic=good_topics.topic_name;
+
+INSERT INTO good_comments (post_id, user_id,  comment_content)
+    SELECT good_posts..id, A.id, A.text_content
+    FROM 
+      (SELECT substring(bad_posts.title from 0 for 100) as post_title, good_users.id, bad_comments.text_content 
+    FROM bad_comments JOIN good_users
+    ON bad_comments.username = good_users.username
+    JOIN bad_posts ON bad_posts.id=bad_comments.post_id) A
+    JOIN good_posts ON good_posts.title=A.post_title;
+    
+    
