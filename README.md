@@ -73,7 +73,7 @@ I will return later and will make proper hightliting and editing in general)))
   * If a post gets deleted, all comments associated with it should be automatically deleted too.
   * If the user who created the comment gets deleted, then the comment will remain, but it will become dissociated from that user.
   * If a comment gets deleted, then all its descendants in the thread structure should be automatically deleted too.
-  * Make sure that a given user can only vote once on a given post:
+* Make sure that a given user can only vote once on a given post:
   * Hint: you can store the (up/down) value of the vote as the values 1 and -1 respectively.
   * If the user who cast a vote gets deleted, then all their votes will remain, but will become dissociated from the user.
   * If a post gets deleted, then all the votes for that post should be automatically deleted too.
