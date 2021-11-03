@@ -38,7 +38,7 @@ url VARCHAR(4000) DEFAULT NULL needs to be a little bit shorter, almost 2 thouth
 You can be familiarised with url length on [this stack overflow post](https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers)
 
 Then it is strange that text_content is DEFAULT NULL. 
-That suppose that we can have empty posts, which is not true. And didn't have logic. Or we can post only the url of external sors without any text, can we? It may be NOT NULL as well as a part of rest columns: topic_id, user_id and probably title
+That suppose that we can have empty posts, which is not true. And didn't have logic. Or we can post only the url of external sources without any text, can we? It may be NOT NULL as well as a part of rest columns: topic_id, user_id and probably title
 
 About upvotes and downvotes. I’m not sure yet about how to realise them. Maybe it has some specific requirement in later chapters. But for now, at list, we need to have something like a votes table where we will have post_id, voter_id and COLUMN like SMALLINT with 1 or -1. I’m not pretty sure at this point. It depends on how we treat deleted users, and how we will display the quantity of votes and voters. Probably, for network performance reasons we will store separately the total amount of positive and negative votes.
 
@@ -81,6 +81,8 @@ I will return later and will make proper hightliting and editing in general)))
   * If the user who cast a vote gets deleted, then all their votes will remain, but will become dissociated from the user.
   * If a post gets deleted, then all the votes for that post should be automatically deleted too.
 
+Respective .sql: my_queries_p1.sql
+
 ### Guideline #2
 
  Here is a list of queries that Udiddit needs in order to support its website and administrative interface. Note that you don’t need to produce the DQL for those queries: they are only provided to guide the design of your new database schema.
@@ -100,19 +102,14 @@ Compute the score of a post, defined as the difference between the number of upv
 
 ### Guidline  #3: 
 
-you’ll need to use normalization, various constraints, as well as indexes in your new database schema. You should use named constraints and indexes to make your schema cleaner.
+Usage of indexes in new database schema. You should use named constraints and indexes to make your schema cleaner.
 
 ### Guideline #4: 
 
-your new database schema will be composed of five (5) tables that should have an auto-incrementing id as their primary key.
-
-### New DDL:
-
+New database schema will be composed of five (5) tables that should have an auto-incrementing id as their primary key.
 
 
 ## Part III: Migrate the provided data
-
-Now that your new schema is created, it’s time to migrate the data from the provided schema in the project’s SQL Workspace to your own schema. This will allow you to review some DML and DQL concepts, as you’ll be using INSERT...SELECT queries to do so. Here are a few guidelines to help you in this process:
 
 Topic descriptions can all be empty
 Since the bad_comments table doesn’t have the threading feature, you can migrate all comments as top-level comments, i.e. without a parent
