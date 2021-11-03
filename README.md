@@ -48,9 +48,7 @@ In real world work, when I think something like “O, I will do this simple/quic
 I will return later and will make proper hightliting and editing in general)))
 
 
-## Part II: Create the DDL for your new schema
-
-Requarement:
+## Part II: Requirement to create the DDL for your new schema
 
 ### Guideline #1
 
@@ -72,15 +70,15 @@ here is a list of features and specifications that Udiddit needs in order to sup
   * If a topic gets deleted, all the posts associated with it should be automatically deleted too.
   * If the user who created the post gets deleted, then the post will remain, but it will become dissociated from that user.
 * Allow registered users to comment on existing posts:
-A comment’s text content can’t be empty.
-Contrary to the current linear comments, the new structure should allow comment threads at arbitrary levels.
-If a post gets deleted, all comments associated with it should be automatically deleted too.
-If the user who created the comment gets deleted, then the comment will remain, but it will become dissociated from that user.
-If a comment gets deleted, then all its descendants in the thread structure should be automatically deleted too.
-Make sure that a given user can only vote once on a given post:
-Hint: you can store the (up/down) value of the vote as the values 1 and -1 respectively.
-If the user who cast a vote gets deleted, then all their votes will remain, but will become dissociated from the user.
-If a post gets deleted, then all the votes for that post should be automatically deleted too.
+  * A comment’s text content can’t be empty.
+  * Contrary to the current linear comments, the new structure should allow comment threads at arbitrary levels.
+  * If a post gets deleted, all comments associated with it should be automatically deleted too.
+  * If the user who created the comment gets deleted, then the comment will remain, but it will become dissociated from that user.
+  * If a comment gets deleted, then all its descendants in the thread structure should be automatically deleted too.
+  * Make sure that a given user can only vote once on a given post:
+  * Hint: you can store the (up/down) value of the vote as the values 1 and -1 respectively.
+  * If the user who cast a vote gets deleted, then all their votes will remain, but will become dissociated from the user.
+  * If a post gets deleted, then all the votes for that post should be automatically deleted too.
 
 ### Guideline #2
 
