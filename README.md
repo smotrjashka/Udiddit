@@ -128,7 +128,7 @@ The DML to migrate the current data in bad_posts and bad_comments to your new da
 
 ## Rubricts
 
-Project specifications to [meet](https://review.udacity.com/#!/rubrics/2802/view)
+Project [specifications](https://review.udacity.com/#!/rubrics/2802/view) to meet
 
 ## Usefull links
 
