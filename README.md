@@ -1,6 +1,6 @@
 # Udiddit, a social news aggregator
 
-Project for Udacity PostgreSQL course 
+Project for Udacity [PostgreSQL](https://www.postgresql.org/about/) course 
 
 ## Introduction
 
@@ -52,7 +52,8 @@ I will return later and will make proper hightliting and editing in general)))
 
 ### Guideline #1
 
-here is a list of features and specifications that Udiddit needs in order to support its website and administrative interface:
+ Here is a list of features and specifications that Udiddit needs in order to support its website and administrative interface:
+ 
 * Allow new users to register:
   * Each username has to be unique
   * Usernames can be composed of at most 25 characters
@@ -82,7 +83,7 @@ here is a list of features and specifications that Udiddit needs in order to sup
 
 ### Guideline #2
 
-here is a list of queries that Udiddit needs in order to support its website and administrative interface. Note that you don’t need to produce the DQL for those queries: they are only provided to guide the design of your new database schema.
+ Here is a list of queries that Udiddit needs in order to support its website and administrative interface. Note that you don’t need to produce the DQL for those queries: they are only provided to guide the design of your new database schema.
 List all users who haven’t logged in in the last year.
 List all users who haven’t created any post.
 Find a user by their username.
