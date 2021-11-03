@@ -14,12 +14,9 @@ Here is the DDL used to create the schema:
 
 ## Starter sql
 
-Its strange part, for me. 
-I will add initial sql for cover next steps.
+This project contains starter schema with data in it. It was bad_db.sql file.
 
-bad_db.sql
-
-Something goes wrong when I tried to add entire sql file
+But something goes wrong when I tried to add entire sql file
 And I divide it into two separate ones:
 
 bad-db-create.sql creates initial schema 
