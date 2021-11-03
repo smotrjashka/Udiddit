@@ -130,8 +130,6 @@ The DML to migrate the current data in bad_posts and bad_comments to your new da
 
 Project specifications to [meet](https://review.udacity.com/#!/rubrics/2802/view)
 
-## Free course about making beautifull READMEs
+## Usefull links
 
 [Writing READMEs course](https://www.udacity.com/course/writing-readmes--ud777)
-
-It is mot an advertisement)))
