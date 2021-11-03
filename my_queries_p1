@@ -1,9 +1,18 @@
 CREATE TABLE good_users (
 id SERIAL PRIMARY KEY,
-username VARCHAR(25) UNIQUE NOT NULL);
+username VARCHAR(25) UNIQUE CHECK (LENGTH(TRIM(title)) > 0));
 
 CREATE TABLE good_topics (
 id SERIAL PRIMARY KEY,
-topic_name VARCHAR(30) UNIQUE NOT NULL,
+topic_name VARCHAR(30) UNIQUE CHECK (LENGTH(TRIM(title)) > 0),
 description VARCHAR(500) DEFAULT NULL);
-CREATE TABLE
+
+CREATE TABLE good_posts (
+id BIGSERIAL PRIMARY KEY,
+title VARCHAR(100) CHECK (LENGTH(TRIM(title)) > 0),
+topic_id INTEGER REFERENCES "good_topics" ON DELETE CASCADE,
+user_id BIGINT REFERENCE "good_users" ON DELETE NULL,
+url VARCHAR(2048),
+text_content TEXT,
+CONSTRAINS url_or_text ((url IS NOT NULL AND text_content IS NULL) OR (url IS NULL AND text_content IS NOT NULL))
+);
