@@ -16,3 +16,13 @@ url VARCHAR(2048),
 text_content TEXT,
 CONSTRAINT "url_or_text" CHECK ((url IS NOT NULL AND text_content IS NULL) OR (url IS NULL AND text_content IS NOT NULL))
 );
+
+CREATE TABLE good_comments (
+id BIGSERIAL PRIMARY KEY,
+post_id REFERENCES "good_posts" ON DELETE CASCADE,
+user_id REFERENCES "good_user" ON DELETE SET NULL,
+associated_comment BIGINT DEFAULT NULL ,
+comment_content TEXT CHECK (LENGTH(TRIM(comment_content)) > 0),
+CONSTRAIN "associated_comment_valid_check" CHECK (associated_comment IS NULL OR (associated_comment>0 AND associated_comment<id) )
+);
+
