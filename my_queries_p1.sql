@@ -1,6 +1,7 @@
 CREATE TABLE good_users (
   id SERIAL PRIMARY KEY,
-  username VARCHAR(25) UNIQUE CHECK (LENGTH(TRIM(username)) > 0));
+  username VARCHAR(25) UNIQUE CHECK (LENGTH(TRIM(username)) > 0),
+  last_log_in DATE DEFAULT NOW());
 
 CREATE TABLE good_topics (
   id SERIAL PRIMARY KEY,
