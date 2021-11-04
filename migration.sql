@@ -16,7 +16,7 @@ JOIN good_users ON bad_posts.username=good_users.username
 JOIN good_topics ON bad_posts.topic=good_topics.topic_name;
 
 INSERT INTO good_comments (post_id, user_id,  comment_content)
-    SELECT good_posts..id, A.id, A.text_content
+    SELECT good_posts.id, A.id, A.text_content
     FROM 
       (SELECT substring(bad_posts.title from 0 for 100) as post_title, good_users.id, bad_comments.text_content 
     FROM bad_comments JOIN good_users
@@ -24,4 +24,18 @@ INSERT INTO good_comments (post_id, user_id,  comment_content)
     JOIN bad_posts ON bad_posts.id=bad_comments.post_id) A
     JOIN good_posts ON good_posts.title=A.post_title;
     
-    
+--- remember we left some users for next time? ---
+
+INSERT INTO good_users (username)
+    SELECT DISTINCT(commentors) FROM
+    (SELECT regexp_split_to_table(upvotes, ',') as commentors from bad_posts
+    UNION 
+    SELECT regexp_split_to_table(downvotes, ',') as commentors from bad_posts) A
+ON CONFLICT DO NOTHING;
+
+
+INSERT INTO good_votes (post_id, user_id, vote)
+    SELECT good_topics.id, B.user_id, 1 FROM
+    (SELECT good_users.id as user_id, topic FROM
+    (SELECT regexp_split_to_table(upvotes, ',') as commentors, substring(topic from 0 for 100) as topic from bad_posts) A
+    JOIN good_users ON good_users.username=A.commentors) B JOIN good_topics on B.topic=good_topics.topic_name;
