@@ -15,3 +15,5 @@ CREATE INDEX comment_thread_idx ON good_comments(associated_comment);
 CREATE INDEX comment_user_idx ON good_comments(user_id);
 
 CREATE INDEX votes_idx ON good_votes(post_id, vote);
+
+CREATE INDEX las_loggin_idx ON good_users(last_log_in);
