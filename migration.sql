@@ -39,3 +39,9 @@ INSERT INTO good_votes (post_id, user_id, vote)
     (SELECT good_users.id as user_id, topic FROM
     (SELECT regexp_split_to_table(upvotes, ',') as commentors, substring(topic from 0 for 100) as topic from bad_posts) A
     JOIN good_users ON good_users.username=A.commentors) B JOIN good_topics on B.topic=good_topics.topic_name;
+
+INSERT INTO good_votes (post_id, user_id, vote)
+    SELECT good_topics.id, B.user_id, -1 FROM
+    (SELECT good_users.id as user_id, topic FROM
+    (SELECT regexp_split_to_table(downvotes, ',') as commentors, substring(topic from 0 for 100) as topic from bad_posts) A
+    JOIN good_users ON good_users.username=A.commentors) B JOIN good_topics on B.topic=good_topics.topic_name;
