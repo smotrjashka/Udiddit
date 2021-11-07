@@ -27,22 +27,20 @@ And I divide it into two separate ones:
 
 I will go as it is, column by column.
 
-First, the topic and username from bad_posts should have separate TABLEs. And we only left here topic_id and user_id. And make them a FOREIGN KEYs. It is about one of the normal forms rule an logic staffs)
-Because one user can have a lot of posts as well as comments in other TABLE bad_comments. And we will have even less topics on the real network. In imaginary one too)))
-About the length of both (and title column) VARCHARs I will think about it a bit later.
+First, the topic and username from bad_posts should have separate `TABLE`s. And we only left here topic_id and user_id. And make them a `FOREIGN KEY`s. It is about one of the normal forms rule an logic staffs)
+Because one user can have a lot of posts as well as comments in other  TABLE bad_comments . And we will have even less topics on the real network. In imaginary one too)))
+About the length of both (and title column) `VARCHAR`s I will think about it a bit later.
 
-url <span style="color:orange;">VARCHAR(4000)</span> DEFAULT NULL needs to be a little bit shorter, almost 2 thouthend charters less. Because the maximum length of the url is 2048 characters. And, it is a pessimistic approach. Have you seen a real life url which has a length of 1_000 characters? I’m not. And I am not expecting to see.
+`url VARCHAR(4000) DEFAULT NULL` needs to be a little bit shorter, almost 2 thouthend charters less. Because the maximum length of the url is 2048 characters. And, it is a pessimistic approach. Have you seen a real life url which has a length of 1_000 characters? I’m not. And I am not expecting to see.
 You can be familiarised with url length on [this stack overflow post](https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers)
 
-Then it is strange that text_content is DEFAULT NULL. 
-That suppose that we can have empty posts, which is not true. And didn't have logic. Or we can post only the url of external sources without any text, can we? It may be NOT NULL as well as a part of rest columns: topic_id, user_id and probably title
+Then it is strange that text_content is `DEFAULT NULL`. 
+That suppose that we can have empty posts, which is not true. And didn't have logic. Or we can post only the url of external sources without any text, can we? It may be `NOT NULL` as well as a part of rest columns: topic_id, user_id and probably title
 
-About upvotes and downvotes. I’m not sure yet about how to realise them. Maybe it has some specific requirement in later chapters. But for now, at list, we need to have something like a votes table where we will have post_id, voter_id and COLUMN like SMALLINT with 1 or -1. I’m not pretty sure at this point. It depends on how we treat deleted users, and how we will display the quantity of votes and voters. Probably, for network performance reasons we will store separately the total amount of positive and negative votes.
+About upvotes and downvotes. I’m not sure yet about how to realise them. Maybe it has some specific requirement in later chapters. But for now, at list, we need to have something like a votes table where we will have `post_id, voter_id` and `COLUMN` like `SMALLINT` with 1 or -1. I’m not pretty sure at this point. It depends on how we treat deleted users, and how we will display the quantity of votes and voters. Probably, for network performance reasons we will store separately the total amount of positive and negative votes.
 
 And one more remark. At this point I supposed that after a post is done it can not be edited. But… We know that is wrong. In every network or forum, even in primitive one, users can edit their posts. It has a line of thinking that I will left for later time, when I will have a better understanding of the entire system.
 In real world work, when I think something like “O, I will do this simple/quick way and after I would be sure that all other parts work perfectly, I will return here and make it properly”... It simply never happens.
-
-I will return later and will make proper hightliting and editing in general)))
 
 
 ## Part II: Requirement to create the DDL for your new schema
