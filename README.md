@@ -118,7 +118,7 @@ New database schema will be composed of five (5) tables that should have an auto
 * Tip: You can start by running only SELECTs to fine-tune your queries, and use a LIMIT to avoid large data sets. Once you know you have the correct query, you can then run your full INSERT...SELECT query.
 * NOTE: The data in your SQL Workspace contains thousands of posts and comments. The DML queries may take at least 10-15 seconds to run.
 
-The DML to migrate the current data in bad_posts and bad_comments to new database schema: migration.sql
+The DML to migrate the current data from bad_posts and bad_comments tables to new database schema: [migration](migration.sql)
 
 
 ## Rubricts
