@@ -19,9 +19,9 @@ This project contains starter schema with data in it. It was bad_db.sql file.
 But something goes wrong when I tried to add entire sql file
 And I divide it into two separate ones:
 
-bad-db-create.sql creates initial schema 
+[bad-db-create](bad-db-create.sql) creates initial schema 
 
-bad-db-insert.sql inserts data for starter project
+[bad-db-insert](bad-db-insert.sql) inserts data for starter project
 
 ## Part I: Investigate the existing schema
 
@@ -78,7 +78,7 @@ I will return later and will make proper hightliting and editing in general)))
   * If the user who cast a vote gets deleted, then all their votes will remain, but will become dissociated from the user.
   * If a post gets deleted, then all the votes for that post should be automatically deleted too.
 
-Respective .sql: my_queries_p1.sql
+Respective [query](my_queries_p1.sql)
 
 ### Guideline #2
 
@@ -125,6 +125,3 @@ The DML to migrate the current data in bad_posts and bad_comments to new databas
 
 Project [specifications](https://review.udacity.com/#!/rubrics/2802/view) to meet
 
-## Usefull links
-
-[Writing READMEs course](https://www.udacity.com/course/writing-readmes--ud777)
