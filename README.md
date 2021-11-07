@@ -31,7 +31,7 @@ First, the topic and username from bad_posts should have separate TABLEs. And we
 Because one user can have a lot of posts as well as comments in other TABLE bad_comments. And we will have even less topics on the real network. In imaginary one too)))
 About the length of both (and title column) VARCHARs I will think about it a bit later.
 
-url VARCHAR(4000) DEFAULT NULL needs to be a little bit shorter, almost 2 thouthend charters less. Because the maximum length of the url is 2048 characters. And, it is a pessimistic approach. Have you seen a real life url which has a length of 1_000 characters? I’m not. And I am not expecting to see.
+url <span style="color:orange;">VARCHAR(4000)</span> DEFAULT NULL needs to be a little bit shorter, almost 2 thouthend charters less. Because the maximum length of the url is 2048 characters. And, it is a pessimistic approach. Have you seen a real life url which has a length of 1_000 characters? I’m not. And I am not expecting to see.
 You can be familiarised with url length on [this stack overflow post](https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers)
 
 Then it is strange that text_content is DEFAULT NULL. 
